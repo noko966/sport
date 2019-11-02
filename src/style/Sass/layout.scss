@@ -1,0 +1,46 @@
+
+.btcl_main_wrapper{
+    width:100%;
+    @include flexbox();
+    @include flex-wrap(wrap);
+}
+.btcl_flac{
+    @include flexbox();
+    @include align-items(center);
+}
+.btcl_flcol{
+    @include flexbox();
+    @include flex-direction(column);
+}
+.btcl_flx{
+    @include flexbox();
+    @include flex-direction(column);
+}
+
+
+.btcl_6{
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.btcl_left_menu{
+    width:240px;
+}
+.btcl_center_menu{
+    flex-grow: 1;
+    min-width: 1px;
+}
+.btcl_right_menu{
+    width:300px;
+}
+
+.btcl_mb_xs{
+    margin-bottom: 4px;
+}
+.btcl_mb_s{
+    margin-bottom: 8px;
+}
+.btcl_mb_m{
+    margin-bottom: 12px;
+}

@@ -1,0 +1,23 @@
+
+$mainbg: #2b2b2b;
+$widgetbg: #2b2b2b;
+$text: #fff;
+$brand: blue;
+$akcent: green;
+
+
+body{
+    background-color: $mainbg;
+}
+.btcl_main_wrapper{
+    background-color: $mainbg;
+}
+.btcl_left_menu{
+    background-color: $widgetbg;
+}
+.btcl_center_menu{
+    background-color: $widgetbg;
+}
+.btcl_right_menu{
+    background-color: $widgetbg;
+}

@@ -1,9 +1,15 @@
+$oddWidth: 82px;
+$oddSpace: 10px;
+$oddBreathingRoom: 10px;
+
+
 @import './reset.scss';
 @import './flex.scss';
 
 @import './layout.scss';
 @import './header.scss';
 @import './sidebarItem.scss';
+@import './bet.scss';
 @import './odd.scss';
 
 @import './game.scss';

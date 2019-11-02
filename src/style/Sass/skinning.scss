@@ -1,9 +1,11 @@
 
-$mainbg: #2b2b2b;
-$widgetbg: #2b2b2b;
+$mainbg: #151516;
+$widgetbg: #1f2022;
+$grey: #4a4a4a;
 $text: #fff;
-$brand: blue;
-$akcent: green;
+$textGrey: #9b9b9b;
+$brand: #0264fb;
+$akcent: #a9aca6;
 
 
 body{
@@ -12,12 +14,30 @@ body{
 .btcl_main_wrapper{
     background-color: $mainbg;
 }
-.btcl_left_menu{
-    background-color: $widgetbg;
+
+.btcl_header{
+    background-color: $mainbg;
+    border-color: $grey;
 }
-.btcl_center_menu{
+
+.btcl_game{
     background-color: $widgetbg;
+    color: $text;
 }
-.btcl_right_menu{
+.btcl_odd{
+    background-color: $brand;
+    color: $widgetbg;
+}
+
+.btcl_sidebar_item {
     background-color: $widgetbg;
+    color: $textGrey;
+}
+
+.btcl_separator{
+    background-color: $grey;
+}
+.btcl_comment{
+    background-color: $grey;
+    color: $widgetbg;
 }

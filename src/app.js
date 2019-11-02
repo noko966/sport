@@ -6,6 +6,8 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import SidebarItem from "./components/SidebarItem";
 import Game from "./components/Game";
+import Bet from "./components/Bet";
+
 
 //fake data
 const sidebarItems = [
@@ -63,8 +65,11 @@ function App() {
           marketCap='market cap: 500$'
           HomeOdds={[{price:'50$',factor:'1.5'},{price:'50$',factor:'1.5'}]}
           AwayOdds={[{price:'50$',factor:'1.5'},{price:'50$',factor:'1.5'}]}
+        >
 
-        />
+          <Bet/>
+        </Game>
+
       </div>
       <div className="btcl_right_menu"></div>
       <Footer></Footer>

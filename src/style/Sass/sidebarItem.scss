@@ -1,8 +1,9 @@
 .btcl_sidebar_item{
     width: 100%;
-    height: 40px;
+    height: 60px;
     @include flexbox();
     @include align-items(center);
+    padding-left: 48px;
     .btcl_icon{
         width: 24px;
         height: 24px;
@@ -13,15 +14,18 @@
     .btcl_text{
         flex-grow: 1;
         min-width: 1px;
+        font-size: 20px;
+        font-weight: 500;
     }
     .btcl_factor{
         width: 40px;
-        height: 24px;
+        height: 23px;
         text-align: center;
         line-height: 24px;
         flex-shrink: 0;
-        padding: 0 10px;
         border:1px solid;
+        font-size: 16px;
+        border-radius: 3px;
     }
     .btcl_arrow{
         width: 24px;

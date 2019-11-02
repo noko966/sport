@@ -25,14 +25,17 @@
     max-width: 50%;
 }
 .btcl_left_menu{
-    width:240px;
+    width:390px;
 }
 .btcl_center_menu{
     flex-grow: 1;
     min-width: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+
 }
 .btcl_right_menu{
-    width:300px;
+    width:420px;
 }
 
 .btcl_mb_xs{

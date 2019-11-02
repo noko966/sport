@@ -6,6 +6,7 @@ $text: #fff;
 $textGrey: #9b9b9b;
 $brand: #0264fb;
 $akcent: #a9aca6;
+$btn_bet_bg: #fff;
 
 
 body{
@@ -40,4 +41,29 @@ body{
 .btcl_comment{
     background-color: $grey;
     color: $widgetbg;
+}
+.btcl_game_footer{
+    color: $textGrey;
+}
+
+//inputs
+.btcl_input_wrapper{
+    &.btcl_input_bet{
+        .btcl_input{
+            background-color: transparent;
+            color:$text;
+            border-color:$text;
+            &::placeholder{
+                color:$text;
+            }
+        }
+    }
+}
+
+//buttons
+.btcl_btn{
+    &.btcl_btn_bet{
+        background-color: $btn_bet_bg;
+        color:$brand;
+    }
 }

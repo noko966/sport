@@ -41,6 +41,7 @@ function App() {
   return (
     <div className="App btcl_main_wrapper">
       <Header></Header>
+      <div className='btcl_main'>
       <div className="btcl_left_menu">
         {sidebarItems.map(item => {
           return (
@@ -67,11 +68,14 @@ function App() {
           AwayOdds={[{price:'50$',factor:'1.5'},{price:'50$',factor:'1.5'}]}
         >
 
-          <Bet/>
+          <Bet type='buy'/>
+          <Bet type='sell'/>
+
         </Game>
 
       </div>
       <div className="btcl_right_menu"></div>
+      </div>
       <Footer></Footer>
     </div>
   );

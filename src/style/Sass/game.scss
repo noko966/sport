@@ -41,15 +41,7 @@
     text-align: center;
     font-size: 35px;
   }
-  .btcl_status {
-    font-size: 15px;
-    font-weight: bold;
-  }
-  .btcl_market_cap {
-    font-size: 17px;
-    font-weight: 500;
-    text-align: right;
-  }
+  
   .btcl_odd_grp {
     display: flex;
     align-items: center;
@@ -93,5 +85,17 @@
   font-size: 15px;
   font-weight: 500;
 }
+.btcl_game_footer{
+  .btcl_status {
+    font-size: 15px;
+    font-weight: bold;
+  }
+  .btcl_market_cap {
+    font-size: 17px;
+    font-weight: 500;
+    text-align: right;
+  }
+}
+
 
 //valskiq696 n0350200979

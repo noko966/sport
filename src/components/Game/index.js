@@ -71,9 +71,9 @@ export default function Game({
       </div>
 
       <div className="btcl_flac">
-        <div className="btcl_score_side">
+        <div className="btcl_score_side btcl_game_footer">
           <div className="btcl_separator btcl_mb_s"></div>
-          <div className="btcl_flac">
+          <div className="btcl_flac ">
             <div className="btcl_6 btcl_status">{status}</div>
             <div className="btcl_6 btcl_market_cap btcl_flx btcl_jfe">
               {marketCap}

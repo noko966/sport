@@ -1,9 +1,11 @@
 
 .btcl_main_wrapper{
     width:100%;
-    @include flexbox();
-    @include flex-wrap(wrap);
 }
+.btcl_main{
+    @include flexbox();
+}
+
 .btcl_flac{
     @include flexbox();
     @include align-items(center);

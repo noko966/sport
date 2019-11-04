@@ -19,4 +19,20 @@
             border:2px solid;
         }
     }
+    &.btcl_input_offer{
+        width: 100px;
+        height: 40px;
+        .btcl_input{
+            border:1px solid;
+        }
+    }
+    &.btcl_input_popup{
+        width: 100%;
+        height: 60px;
+        .btcl_input{
+            border:1px solid;
+            height: 60px;
+            display: block;
+        }
+    }
 }

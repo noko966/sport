@@ -19,7 +19,7 @@ export default function Bet({
         <Input className='btcl_input_bet' type='number'/>
         <Button content={type==='sell' ? 'sell' : 'buy'} className={'btcl_btn_bet ' + (type==='sell' ? 'btcl_btn_bet_sell' : 'btcl_btn_bet_buy')}/>
       </div>
-      <i className='btcl_close'>x</i>
+      <i className='btcl_close '>✖</i>
     </div>
   );
 }

@@ -1,0 +1,21 @@
+.btcl_tabs_wrapper {
+  @include flexbox();
+  @include align-items(center);
+  height: 69px;
+  margin-bottom: 9px;
+  .btcl_tab_item {
+    width: 33.333%;
+  }
+}
+
+.btcl_tab_item {
+  font-size: 24px;
+  height: 69px;
+  line-height: 69px;
+  text-align: center;
+  width: auto;
+  cursor: pointer;
+  &.btcl_tab_item_active {
+    border-bottom: 1px solid;
+  }
+}

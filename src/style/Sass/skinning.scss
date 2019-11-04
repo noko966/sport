@@ -1,4 +1,3 @@
-
 $mainbg: #151516;
 $widgetbg: #1f2022;
 $grey: #4a4a4a;
@@ -7,63 +6,239 @@ $textGrey: #9b9b9b;
 $brand: #0264fb;
 $akcent: #a9aca6;
 $btn_bet_bg: #fff;
+$gold: #dda42f;
+$sidebar2: #3a3b3c;
 
-
-body{
-    background-color: $mainbg;
+body {
+  background-color: $mainbg;
 }
-.btcl_main_wrapper{
-    background-color: $mainbg;
-}
-
-.btcl_header{
-    background-color: $mainbg;
-    border-color: $grey;
+.btcl_main_wrapper {
+  background-color: $mainbg;
 }
 
-.btcl_game{
-    background-color: $widgetbg;
-    color: $text;
+.btcl_header {
+  background-color: $mainbg;
+  border-color: $grey;
 }
-.btcl_odd{
-    background-color: $brand;
-    color: $widgetbg;
+
+.btcl_game,
+.btcl_game_mini {
+  background-color: $widgetbg;
+  color: $text;
+}
+.btcl_right_menu_items_wrapper{
+  background-color: $widgetbg;
+}
+.btcl_odd {
+  background-color: $brand;
+  color: $widgetbg;
 }
 
 .btcl_sidebar_item {
-    background-color: $widgetbg;
+  background-color: $widgetbg;
+  color: $textGrey;
+  &.btcl_sidebar_item_2{
+    background-color: $sidebar2;
     color: $textGrey;
+  }
 }
 
-.btcl_separator{
-    background-color: $grey;
+.btcl_separator {
+  background-color: $grey;
 }
-.btcl_comment{
-    background-color: $grey;
-    color: $widgetbg;
+.btcl_separator_akcent {
+  background-color: $brand;
 }
-.btcl_game_footer{
+.btcl_comment {
+  background-color: $grey;
+  color: $widgetbg;
+}
+.btcl_game_footer {
+  color: $textGrey;
+}
+.btcl_game_mini {
+  .btcl_winner {
     color: $textGrey;
+  }
+  .btcl_percentage {
+    color: $brand;
+  }
+  .btcl_factor {
+    background-color: $brand;
+    color: $widgetbg;
+  }
 }
 
 //inputs
-.btcl_input_wrapper{
-    &.btcl_input_bet{
-        .btcl_input{
-            background-color: transparent;
-            color:$text;
-            border-color:$text;
-            &::placeholder{
-                color:$text;
-            }
-        }
+.btcl_input_wrapper {
+  &.btcl_input_bet {
+    .btcl_input {
+      background-color: transparent;
+      color: $text;
+      border-color: $text;
+      &::placeholder {
+        color: $text;
+      }
     }
+  }
+  &.btcl_input_offer {
+    .btcl_input {
+      background-color: transparent;
+      color: $textGrey;
+      border-color: $textGrey;
+      &::placeholder {
+        color: $textGrey;
+      }
+    }
+  }
+  &.btcl_input_popup{
+    .btcl_input{
+      background-color: transparent;
+      color: $textGrey;
+      border-color: $textGrey;
+    }
+}
 }
 
 //buttons
-.btcl_btn{
-    &.btcl_btn_bet{
-        background-color: $btn_bet_bg;
-        color:$brand;
+.btcl_btn {
+  &.btcl_btn_bet {
+    background-color: $btn_bet_bg;
+    color: $brand;
+  }
+  &.btn_header {
+    background-color: transparent;
+    color: $textGrey;
+  }
+  &.btn_sign_up {
+    background-color: transparent;
+    color: $brand;
+  }
+  &.btn_popup_main  {
+    background-color: $brand;
+    color: $btn_bet_bg;
+  }
+}
+
+//tab
+.btcl_tabs_wrapper {
+  background-color: $widgetbg;
+}
+.btcl_tab_item {
+  color: $textGrey;
+  &.btcl_tab_item_active {
+    color: $brand;
+  }
+}
+//offer
+
+.btcl_offer {
+  background-color: $widgetbg;
+  color: $text;
+
+  .btcl_price {
+    color: $textGrey;
+  }
+  .btcl_payout {
+    color: $gold;
+  }
+}
+
+.btcl_offer {
+  .btcl_offer {
+    width: 100%;
+    padding-top: 22px;
+    padding-right: 20px;
+    padding-left: 20px;
+
+    .btcl_title {
+      font-size: 20px;
     }
+    .btcl_type {
+      font-size: 20px;
+    }
+    .btcl_team_name {
+      font-size: 25px;
+      text-transform: capitalize;
+    }
+    .btcl_price {
+      font-size: 24px;
+      text-transform: capitalize;
+    }
+    .btcl_payout {
+      font-size: 24px;
+    }
+  }
+  .btcl_title {
+    font-size: 20px;
+  }
+  .btcl_type {
+    font-size: 20px;
+  }
+  .btcl_team_name {
+    font-size: 25px;
+    text-transform: capitalize;
+  }
+  .btcl_price {
+    font-size: 24px;
+    text-transform: capitalize;
+  }
+  .btcl_payout {
+    font-size: 24px;
+  }
+}
+
+.btcl_footer {
+  border-color:$grey;
+  .btcl_footer_link,
+  .btcl_footer_copy {
+    color:$grey
+  }
+}
+
+//popups
+.btcl_popup_wrapper{
+  background-color: rgba(0,0,0,0.5);
+  color: $text;
+  .btcl_popup{
+    background-color:$widgetbg;
+    .btcl_close{
+      color: $textGrey;
+    }
+  }
+}
+
+.btcl_popup_wrapper{
+  background-color: rgba(0,0,0,0.5);
+  .btcl_popup{
+    background-color:$widgetbg;
+    .btcl_popup_heading{
+      color: $brand;
+    }
+    .btcl_popup_link{
+      color: $brand;
+      text-decoration: none;
+    }
+  }
+}
+.btcl_popup_form_grp{
+  >label{
+    color: $textGrey;
+  }
+  
+}
+
+//scrollbar
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $grey; 
+  border-radius: 5px;
 }

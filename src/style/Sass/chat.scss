@@ -1,0 +1,20 @@
+.btcl_chat {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  .btcl_chat_head {
+    width: 157px;
+    height: 133px;
+    background-image: url(../../assets/images/chat/1.png);
+    background-size: 100%;
+  }
+  .btcl_chat_content{
+    width: 394px;
+    height: 518px;
+    border-radius: 15px 15px 0 15px;
+    background: red;
+    position: absolute;
+    bottom: 0;
+    transform: translateX(-100%);
+  }
+}

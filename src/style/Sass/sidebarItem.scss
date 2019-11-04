@@ -4,6 +4,8 @@
     @include flexbox();
     @include align-items(center);
     padding-left: 48px;
+    padding-right: 35px;
+    cursor: pointer;
     .btcl_icon{
         width: 24px;
         height: 24px;
@@ -26,6 +28,7 @@
         border:1px solid;
         font-size: 16px;
         border-radius: 3px;
+        margin-right: 8px;
     }
     .btcl_arrow{
         width: 24px;

@@ -1,6 +1,7 @@
 $oddWidth: 82px;
 $oddSpace: 10px;
 $oddBreathingRoom: 10px;
+$header_height: 90px;
 
 
 @import './reset.scss';
@@ -14,8 +15,16 @@ $oddBreathingRoom: 10px;
 @import './sidebarItem.scss';
 @import './bet.scss';
 @import './odd.scss';
+@import './offer.scss';
+@import './popups.scss';
+
+
+@import './tabItem.scss';
 
 @import './game.scss';
+@import './gameMini.scss';
+@import './chat.scss';
+
 
 
 @import './footer.scss';

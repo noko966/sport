@@ -7,30 +7,36 @@ export default function Footer() {
       <ul>
         <li>
           <a className="btcl_footer_link" href="">
-            text
+            about
           </a>
         </li>
         <li>
           <a className="btcl_footer_link" href="">
-            text
+            Careers
           </a>
         </li>
         <li>
           <a className="btcl_footer_link" href="">
-            text
+            Contact Us
           </a>
         </li>
         <li>
           <a className="btcl_footer_link" href="">
-            text
+            Terms of Privacy
           </a>
         </li>
         <li>
           <a className="btcl_footer_link" href="">
-            text
+            Betting Rules
           </a>
         </li>
       </ul>
+      <div className="btcl_footer_copy_wrapper">
+        <div className="btcl_footer_copy">
+          {" "}
+          ⓒ 2019 Beticle . All rights reserved.
+        </div>
+      </div>
     </div>
   );
 }

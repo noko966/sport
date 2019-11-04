@@ -1,51 +1,91 @@
 
-.btcl_main_wrapper{
-    width:100%;
+.btcl_main_wrapper {
+  width: 100%;
 }
-.btcl_main{
-    @include flexbox();
+.btcl_main {
+  @include flexbox();
+  padding-top: 15px;
+  padding-bottom: 15px;
+  height: calc(100vh - #{$header_height});
+  overflow: hidden;
 }
-
-.btcl_flac{
-    @include flexbox();
-    @include align-items(center);
+.btcl_right_menu_items_wrapper {
+  padding-bottom: 250px;
 }
-.btcl_flcol{
-    @include flexbox();
-    @include flex-direction(column);
+.btcl_take_all_space {
+  flex-grow: 1;
+  min-width: 1px;
 }
-.btcl_flx{
-    @include flexbox();
-    @include flex-direction(column);
-}
-
-
-.btcl_6{
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 50%;
-    flex: 0 0 50%;
-    max-width: 50%;
-}
-.btcl_left_menu{
-    width:390px;
-}
-.btcl_center_menu{
-    flex-grow: 1;
-    min-width: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
-
-}
-.btcl_right_menu{
-    width:420px;
+.btcl_aw_space {
+  flex-shrink: 0;
 }
 
-.btcl_mb_xs{
-    margin-bottom: 4px;
+.btcl_flac {
+  @include flexbox();
+  @include align-items(center);
 }
-.btcl_mb_s{
-    margin-bottom: 8px;
+.btcl_flje {
+  @include flexbox();
+  @include align-items(center);
+  @include justify-content(flex-end);
 }
-.btcl_mb_m{
-    margin-bottom: 12px;
+.btcl_fljc {
+  @include flexbox();
+  @include align-items(center);
+  @include justify-content(center);
+}
+.btcl_flcol {
+  @include flexbox();
+  @include flex-direction(column);
+}
+.btcl_flx {
+  @include flexbox();
+  @include flex-direction(column);
+}
+
+.btcl_mini_games_wrapper {
+  width: 100%;
+  @include flexbox();
+  @include align-items(center);
+  > .btcl_game_mini {
+    width: calc(50% - 8px);
+    margin-right: 16px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.btcl_6 {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+.btcl_left_menu {
+  width: 390px;
+}
+.btcl_center_menu {
+  flex-grow: 1;
+  min-width: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  overflow-y: auto;
+}
+.btcl_right_menu {
+  width: 420px;
+  overflow-y: auto;
+}
+
+.btcl_mb_xs {
+  margin-bottom: 4px;
+}
+.btcl_mb_s {
+  margin-bottom: 8px;
+}
+.btcl_mb_m {
+  margin-bottom: 12px;
+}
+.btcl_mb_l {
+  margin-bottom: 24px;
 }

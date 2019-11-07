@@ -1,3 +1,44 @@
+$themes: (
+  dark: (
+    mainbg: #151516,
+    widgetbg: #1f2022,
+    grey: #4a4a4a,
+    text: #fff,
+    textGrey: #9b9b9b,
+    brand: #0264fb,
+    akcent: #a9aca6,
+    btn_bet_bg: #fff,
+    gold: #dda42f,
+    sidebar2: #3a3b3c,
+  ),
+  light: (
+    mainbg: #dedede,
+    widgetbg: #fff,
+    grey: #4a4a4a,
+    text: #000,
+    textGrey: #111111,
+    brand: #0264fb,
+    akcent: #a9aca6,
+    btn_bet_bg: #fff,
+    gold: #dda42f,
+    sidebar2: #fff,
+  )
+);
+
+@mixin theme($themes: $themes) {
+  @each $theme, $types in $themes {
+    .theme-#{$theme} & {
+      $theme: map-get($themes, $theme) !global;
+      @content;
+    }
+  }  
+}
+
+@function theme-get($name) {
+  @return map-get($theme, $name);
+}
+
+
 $mainbg: #151516;
 $widgetbg: #1f2022;
 $grey: #4a4a4a;
@@ -10,62 +51,93 @@ $gold: #dda42f;
 $sidebar2: #3a3b3c;
 
 body {
-  background-color: $mainbg;
+  @include theme() {
+    background-color: theme-get(mainbg);
+  }
+  
 }
 .btcl_main_wrapper {
-  background-color: $mainbg;
+  @include theme() {
+    background-color: theme-get(mainbg);
+  }
 }
 
 .btcl_header {
-  background-color: $mainbg;
-  border-color: $grey;
+  @include theme() {
+    background-color: theme-get(mainbg);
+    color: theme-get(grey);
+  }
 }
 
 .btcl_game,
 .btcl_game_mini {
-  background-color: $widgetbg;
-  color: $text;
+  @include theme() {
+    background-color: theme-get(widgetbg);
+    color: theme-get(text);
+  }
 }
 .btcl_right_menu_items_wrapper{
-  background-color: $widgetbg;
+  @include theme() {
+    background-color: theme-get(widgetbg);
+  }
 }
 .btcl_odd {
-  background-color: $brand;
-  color: $widgetbg;
+  @include theme() {
+    background-color: theme-get(brand);
+    color: theme-get(widgetbg);
+  }
 }
 
 .btcl_sidebar_item {
-  background-color: $widgetbg;
-  color: $textGrey;
+  @include theme() {
+  background-color: theme-get(widgetbg);
+  color: theme-get(textGrey);
+  }
   &.btcl_sidebar_item_2{
-    background-color: $sidebar2;
-    color: $textGrey;
+    @include theme() {
+      background-color: theme-get(sidebar2);
+      color: theme-get(textGrey);
+    }
   }
 }
 
 .btcl_separator {
-  background-color: $grey;
+  @include theme() {
+    background-color: theme-get(grey);
+  }
 }
 .btcl_separator_akcent {
-  background-color: $brand;
+  @include theme() {
+    background-color: theme-get(brand);
+  }
 }
 .btcl_comment {
-  background-color: $grey;
-  color: $widgetbg;
+  @include theme() {
+    background-color: theme-get(grey);
+    color: theme-get(widgetbg);
+  }
 }
 .btcl_game_footer {
-  color: $textGrey;
+  @include theme() {
+    color: theme-get(textGrey);
+  }
 }
 .btcl_game_mini {
   .btcl_winner {
-    color: $textGrey;
+    @include theme() {
+      color: theme-get(textGrey);
+    }
   }
   .btcl_percentage {
-    color: $brand;
+    @include theme() {
+      color: theme-get(brand);
+    }
   }
   .btcl_factor {
-    background-color: $brand;
-    color: $widgetbg;
+    @include theme() {
+      background-color: theme-get(brand);
+      color: theme-get(widgetbg);
+    }
   }
 }
 
@@ -74,28 +146,38 @@ body {
   &.btcl_input_bet {
     .btcl_input {
       background-color: transparent;
-      color: $text;
-      border-color: $text;
+      @include theme() {
+        color: theme-get(text);
+        border-color: theme-get(text);
+      }
       &::placeholder {
-        color: $text;
+        @include theme() {
+          color: theme-get(text);
+        }
       }
     }
   }
   &.btcl_input_offer {
     .btcl_input {
       background-color: transparent;
-      color: $textGrey;
-      border-color: $textGrey;
+      @include theme() {
+        color: theme-get(textGrey);
+        border-color: theme-get(textGrey);
+      }
       &::placeholder {
-        color: $textGrey;
+        @include theme() {
+          color: theme-get(textGrey);
+        }
       }
     }
   }
   &.btcl_input_popup{
     .btcl_input{
       background-color: transparent;
-      color: $textGrey;
-      border-color: $textGrey;
+      @include theme() {
+        color: theme-get(textGrey);
+        border-color: theme-get(textGrey);
+      }
     }
 }
 }
@@ -103,107 +185,93 @@ body {
 //buttons
 .btcl_btn {
   &.btcl_btn_bet {
-    background-color: $btn_bet_bg;
-    color: $brand;
+    @include theme() {
+      background-color: theme-get(btn_bet_bg);
+      color: theme-get(brand);
+    }
   }
   &.btn_header {
     background-color: transparent;
-    color: $textGrey;
+    @include theme() {
+      color: theme-get(textGrey);
+    }
   }
   &.btn_sign_up {
     background-color: transparent;
-    color: $brand;
+    @include theme() {
+      color: theme-get(brand);
+    }
   }
   &.btn_popup_main  {
-    background-color: $brand;
-    color: $btn_bet_bg;
+    @include theme() {
+      background-color: theme-get(brand);
+      color: theme-get(btn_bet_bg);
+    }
   }
 }
 
 //tab
 .btcl_tabs_wrapper {
-  background-color: $widgetbg;
+  @include theme() {
+    background-color: theme-get(widgetbg);
+  }
 }
 .btcl_tab_item {
-  color: $textGrey;
+  @include theme() {
+    color: theme-get(textGrey);
+  }
   &.btcl_tab_item_active {
-    color: $brand;
+    @include theme() {
+      color: theme-get(brand);
+    }
   }
 }
 //offer
 
 .btcl_offer {
-  background-color: $widgetbg;
-  color: $text;
-
+  @include theme() {
+    background-color: theme-get(widgetbg);
+    color: theme-get(text);
+  }
   .btcl_price {
-    color: $textGrey;
+    @include theme() {
+      color: theme-get(textGrey);
+    }
   }
   .btcl_payout {
-    color: $gold;
+    @include theme() {
+      color: theme-get(gold);
+    }
   }
 }
 
-.btcl_offer {
-  .btcl_offer {
-    width: 100%;
-    padding-top: 22px;
-    padding-right: 20px;
-    padding-left: 20px;
-
-    .btcl_title {
-      font-size: 20px;
-    }
-    .btcl_type {
-      font-size: 20px;
-    }
-    .btcl_team_name {
-      font-size: 25px;
-      text-transform: capitalize;
-    }
-    .btcl_price {
-      font-size: 24px;
-      text-transform: capitalize;
-    }
-    .btcl_payout {
-      font-size: 24px;
-    }
-  }
-  .btcl_title {
-    font-size: 20px;
-  }
-  .btcl_type {
-    font-size: 20px;
-  }
-  .btcl_team_name {
-    font-size: 25px;
-    text-transform: capitalize;
-  }
-  .btcl_price {
-    font-size: 24px;
-    text-transform: capitalize;
-  }
-  .btcl_payout {
-    font-size: 24px;
-  }
-}
 
 .btcl_footer {
-  border-color:$grey;
+  @include theme() {
+    border-color: theme-get(grey);
+  }
   .btcl_footer_link,
   .btcl_footer_copy {
-    color:$grey
+    @include theme() {
+      color: theme-get(grey);
+    }
   }
 }
 
 //popups
 .btcl_popup_wrapper{
   background-color: rgba(0,0,0,0.5);
-  color: $text;
+  @include theme() {
+    color: theme-get(text);
+  }
   .btcl_popup{
-    background-color:$widgetbg;
+    @include theme() {
+      background-color: theme-get(widgetbg);
+    }
     .btcl_close{
-      color: $textGrey;
+      @include theme() {
+        color: theme-get(textGrey);
+      }
     }
   }
 }
@@ -211,19 +279,27 @@ body {
 .btcl_popup_wrapper{
   background-color: rgba(0,0,0,0.5);
   .btcl_popup{
-    background-color:$widgetbg;
+    @include theme() {
+      background-color: theme-get(widgetbg);
+    }
     .btcl_popup_heading{
-      color: $brand;
+      @include theme() {
+        color: theme-get(brand);
+      }
     }
     .btcl_popup_link{
-      color: $brand;
+      @include theme() {
+        color: theme-get(brand);
+      }
       text-decoration: none;
     }
   }
 }
 .btcl_popup_form_grp{
   >label{
-    color: $textGrey;
+    @include theme() {
+      color: theme-get(textGrey);
+    }
   }
   
 }
@@ -239,6 +315,8 @@ body {
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: $grey; 
+  @include theme() {
+    background: theme-get(grey);
+  }
   border-radius: 5px;
 }

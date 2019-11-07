@@ -18,7 +18,6 @@ import Login from "./components/Login";
 //chat
 import Chat from "./components/Chat";
 
-
 //fake data
 const sidebarItems = [
   {
@@ -167,12 +166,12 @@ function App() {
         </div>
       </div>
       {/* <Footer></Footer> */}
-      {
-        false && <div className="btcl_popup_wrapper">
-        <Login />
-      </div>
-      }
-      <Chat/>
+      {false && (
+        <div className="btcl_popup_wrapper">
+          <Login />
+        </div>
+      )}
+      {/* <Chat/> */}
     </div>
   );
 }

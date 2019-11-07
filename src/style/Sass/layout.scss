@@ -1,6 +1,6 @@
-
 .btcl_main_wrapper {
   width: 100%;
+  min-width: $tablet;
 }
 .btcl_main {
   @include flexbox();
@@ -47,8 +47,22 @@
   width: 100%;
   @include flexbox();
   @include align-items(center);
+  @media (max-width: $laptop) {
+    @include flex-wrap(wrap);
+  }
+  @media (max-width: $tablet) {
+    @include flex-wrap(wrap);
+  }
   > .btcl_game_mini {
     width: calc(50% - 8px);
+    @media (max-width: $laptop) {
+      width: 100%;
+      margin-right: 0;
+    }
+    @media (max-width: $tablet) {
+      @include flex-wrap(wrap);
+      width: 100%;
+    }
     margin-right: 16px;
     &:last-child {
       margin-right: 0;
@@ -64,6 +78,13 @@
 }
 .btcl_left_menu {
   width: 390px;
+  flex-shrink: 0;
+  @media (max-width: $laptop) {
+    width: 300px;
+  }
+  @media (max-width: $tablet) {
+    width: 200px;
+  }
 }
 .btcl_center_menu {
   flex-grow: 1;
@@ -73,8 +94,15 @@
   overflow-y: auto;
 }
 .btcl_right_menu {
+  flex-shrink: 0;
   width: 420px;
   overflow-y: auto;
+  @media (max-width: $laptop) {
+    width: 350px;
+  }
+  @media (max-width: $tablet) {
+    width: 200px;
+  }
 }
 
 .btcl_mb_xs {

@@ -8,12 +8,22 @@
   @include flexbox();
   @include flex-direction(column);
   @include justify-content(center);
-  
   position: relative;
   margin-bottom: 10px;
+  @media (max-width: $laptop) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media (max-width: $tablet) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
   &:last-child {
     margin-bottom: 0;
   }
+
   .btcl_bet_heading {
     flex-grow: 1;
     flex-shrink: 0;
@@ -25,20 +35,32 @@
     text-transform: uppercase;
     margin-bottom: 8px;
   }
+
   .btcl_bet_name {
     font-size: 22px;
     text-transform: uppercase;
   }
-  .btcl_input_bet{
-      margin-right: 15px;
+
+  .btcl_input_bet {
+    margin-right: 15px;
   }
-  .btcl_btn_bet{
-      margin-left: 100px;
+
+  .btcl_btn_bet {
+    margin-left: 100px;
+    @media (max-width: $laptop) {
+      margin-left: 0;
+    }
+  
+    @media (max-width: $tablet) {
+      margin-left: 0;
+    }
   }
-  .btcl_bet_info_cont{
-      margin-bottom: 7px;
-      @include flexbox();
-      @include justify-content(flex-end);
+
+  .btcl_bet_info_cont {
+    margin-bottom: 7px;
+    @include flexbox();
+    @include justify-content(flex-end);
+    padding-right: 30px;
 
   }
 }

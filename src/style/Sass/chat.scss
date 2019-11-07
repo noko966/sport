@@ -56,8 +56,9 @@
       color:#fff;
       font-size: 25px;
       position: absolute;
-      right: 0;
-      top: 0;
+      right: 24px;
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
 }

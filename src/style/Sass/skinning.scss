@@ -6,7 +6,8 @@ $themes: (
     text: #fff,
     textGrey: #9b9b9b,
     brand: #0264fb,
-    akcent: #a9aca6,
+    akcent: #07ba59,
+    betText: #fff,
     btn_bet_bg: #fff,
     gold: #dda42f,
     sidebar2: #3a3b3c,
@@ -18,7 +19,8 @@ $themes: (
     text: #000,
     textGrey: #111111,
     brand: #0264fb,
-    akcent: #a9aca6,
+    akcent: #07ba59,
+    betText: #fff,
     btn_bet_bg: #fff,
     gold: #dda42f,
     sidebar2: #fff,
@@ -301,7 +303,23 @@ body {
       color: theme-get(textGrey);
     }
   }
-  
+
+}
+
+.btcl_bet{
+  &.btcl_bet_sell{
+    @include theme() {
+      background-color: theme-get(brand);
+      color: theme-get(betText);
+    }
+  }
+  &.btcl_bet_buy{
+    @include theme() {
+      background-color: theme-get(akcent);
+      color: theme-get(betText);
+    }
+  }
+
 }
 
 //scrollbar
